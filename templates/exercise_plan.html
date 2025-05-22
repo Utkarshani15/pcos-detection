@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Exercise Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffe6f2;
+        }
+
+        header {
+            background-color: #ff99cc;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #ffccdd;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: #d63384;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background 0.3s, color 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #ff4d94;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        .exercise-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #d63384;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .exercise-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .exercise-card h3 {
+            font-size: 1.4rem;
+            color: #d63384;
+            margin-bottom: 1rem;
+        }
+
+        .exercise-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-card li {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #ff99cc;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weekly Exercise Plan</h1>
+    </header>
+    
+    <nav>
+        <a href="{{ url_for('pcos123') }}">PCOS Info</a>
+        <a href="{{ url_for('dietplan') }}">Diet Plan</a>
+
+    </nav>
+
+    <div class="container">
+        <h2 class="exercise-title">Recommended Exercises for PCOS</h2>
+        <div class="grid">
+            <div class="exercise-card">
+                <h3>Monday - Cardio</h3>
+                <ul>
+                    <li>30-minute brisk walking</li>
+                    <li>15-minute jump rope</li>
+                    <li>Cool-down stretching</li>
+                </ul>
+            </div>
+
+            <div class="exercise-card">
+                <h3>Tuesday - Strength Training</h3>
+                <ul>
+                    <li>Bodyweight squats - 3 sets of 10</li>
+                    <li>Dumbbell lunges - 3 sets of 12</li>
+                    <li>Push-ups - 3 sets of 10</li>
+                </ul>
+            </div>
+
+            <div class="exercise-card">
+                <h3>Wednesday - Yoga & Stretching</h3>
+                <ul>
+                    <li>20 minutes of yoga (poses for hormone balance)</li>
+                    <li>Deep breathing exercises</li>
+                </ul>
+            </div>
+
+            <div class="exercise-card">
+                <h3>Thursday - HIIT</h3>
+                <ul>
+                    <li>30 seconds sprint + 1-minute rest (repeat 10x)</li>
+                    <li>Jump squats - 3 sets of 15</li>
+                    <li>Plank hold - 45 seconds</li>
+                </ul>
+            </div>
+
+            <div class="exercise-card">
+                <h3>Friday - Full Body Workout</h3>
+                <ul>
+                    <li>Deadlifts - 3 sets of 10</li>
+                    <li>Dumbbell rows - 3 sets of 12</li>
+                    <li>Leg raises - 3 sets of 10</li>
+                </ul>
+            </div>
+
+            <div class="exercise-card">
+                <h3>Saturday - Light Activity</h3>
+                <ul>
+                    <li>Go for a 45-minute walk</li>
+                    <li>Stretching and mobility exercises</li>
+                </ul>
+            </div>
+
+            <div class="exercise-card">
+                <h3>Sunday - Rest & Recovery</h3>
+                <ul>
+                    <li>Foam rolling</li>
+                    <li>Light yoga</li>
+                    <li>Hydration and healthy meal planning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 PCOS Health & Wellness. All rights reserved.</p>
+    </footer>
+</body>
+</html>

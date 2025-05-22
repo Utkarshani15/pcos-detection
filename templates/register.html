@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Detection - Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 255, 255, 0.5)), 
+            url('https://images.ctfassets.net/juauvlea4rbf/1dg2dQd9qOQYyMSUkYUk2A/385fd7e38fbb9158a0999c28b5573554/PCOS_101_fb_2x.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: left;
+            border: 2px solid #ff85a2;
+        }
+
+        h2, h3 {
+            color: #d6336c;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff85a2;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #ff85a2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #d6336c;
+        }
+
+        .toggle {
+            margin-top: 10px;
+            color: #d6336c;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Join PCOS Detection</h2>
+        <h3>Register</h3>
+        
+        <!-- ✅ FIXED FORM -->
+        <form action="{{ url_for('register') }}" method="POST">
+            <input type="text" name="username" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" id="register-password" placeholder="Password" required autocomplete="new-password">
+            <button type="submit">Register</button>
+        </form>
+        
+        <!-- ✅ Fixed text alignment -->
+        <p class="toggle"></p>
+        <p class="toggle">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Diet Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #ffe6f2, #fff);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ff99cc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        td {
+            background-color: #ffe6f2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header-text {
+            color: #d63384;
+        }
+
+        .nav-link {
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #ff99cc;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="bg-pink-500 text-white text-center py-4">
+        <h1 class="text-3xl font-bold header-text">PCOS Diet Plan</h1>
+    </header>
+
+    <nav class="bg-pink-700 text-white">
+        <div class="container mx-auto flex justify-center space-x-4">
+            <a href="{{ url_for('detect') }}">Detect</a>
+            <a href="{{ url_for('exercise_plan') }}">Exercise Plan</a>
+            <a href="{{ url_for('pcos123') }}">PCOS Info</a>
+            <a href="{{ url_for('dietplan') }}">Diet Plan</a>
+
+        </div>
+    </nav>
+
+    <div class="container mx-auto my-8 px-4">
+        <section id="diet">
+            <h2 class="text-2xl font-bold text-center mb-6 text-pink-600">Weekly Diet Plan</h2>
+
+            <div class="overflow-x-auto">
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Breakfast</th>
+                        <th>Lunch</th>
+                        <th>Snacks</th>
+                        <th>Dinner</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Oatmeal with berries and nuts</td>
+                        <td>Grilled chicken salad with mixed greens</td>
+                        <td>Apple slices with almond butter</td>
+                        <td>Baked salmon with quinoa and steamed vegetables</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Greek yogurt with honey and granola</td>
+                        <td>Turkey and avocado wrap</td>
+                        <td>Carrot sticks with hummus</td>
+                        <td>Stir-fried tofu with brown rice and vegetables</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Smoothie with spinach, banana, and protein powder</td>
+                        <td>Quinoa salad with chickpeas and vegetables</td>
+                        <td>Mixed nuts and seeds</td>
+                        <td>Grilled shrimp with sweet potato and broccoli</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Whole grain toast with avocado and poached egg</td>
+                        <td>Lentil soup with a side salad</td>
+                        <td>Sliced cucumber with tzatziki</td>
+                        <td>Baked chicken with roasted vegetables</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Chia pudding with fresh fruit</td>
+                        <td>Tuna salad with mixed greens</td>
+                        <td>Bell pepper slices with guacamole</td>
+                        <td>Grilled steak with mashed cauliflower and green beans</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Scrambled eggs with spinach and tomatoes</td>
+                        <td>Chicken and vegetable stir-fry</td>
+                        <td>Greek yogurt with berries</td>
+                        <td>Baked cod with wild rice and asparagus</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Smoothie bowl with mixed fruits and nuts</td>
+                        <td>Veggie burger with a side salad</td>
+                        <td>Apple slices with peanut butter</td>
+                        <td>Grilled chicken with quinoa and roasted vegetables</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-pink-700 text-white text-center py-4 mt-10">
+        <p>© 2025 PCOS Detection. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
